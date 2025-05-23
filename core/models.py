@@ -21,14 +21,11 @@ class Tribunal(BaseModel):
     TYPES_TRIBUNAL = [
         ('COUR_CASSATION', 'Cour de Cassation'),
         ('COUR_APPEL', 'Cour d\'Appel'),
-        ('TRIBUNAL_JUDICIAIRE', 'Tribunal Judiciaire'),
-        ('TRIBUNAL_PROXIMITE', 'Tribunal de Proximité'),
+        ('TGI', 'Tribunal de Grande Instance'),
+        ('TRIBUNAL_DU_TRAVAIL', 'Tribunal du Travail'),
         ('TRIBUNAL_COMMERCE', 'Tribunal de Commerce'),
-        ('CONSEIL_PRUDHOMMES', 'Conseil de Prud\'hommes'),
-        ('TRIBUNAL_ADMINISTRATIF', 'Tribunal Administratif'),
-        ('TRIBUNAL_CORRECTIONNEL', 'Tribunal Correctionnel'),
-        ('COUR_ASSISES', 'Cour d\'Assises'),
-        ('TRIBUNAL_POLICE', 'Tribunal de Police'),
+        ('TRIPAIX', 'Tribunal de Paix'),
+        ('TPE', 'Tribunal pour Enfants'),
     ]
     
     nom = models.CharField(max_length=200)
@@ -50,11 +47,8 @@ class Parquet(BaseModel):
     """Parquets et ministère public"""
     TYPES_PARQUET = [
         ('PARQUET_GENERAL', 'Parquet Général'),
-        ('PARQUET_TJ', 'Parquet du Tribunal Judiciaire'),
-        ('PARQUET_SPECIALISE', 'Parquet Spécialisé'),
-        ('PARQUET_ANTITERRORISTE', 'Parquet National Antiterroriste'),
-        ('PARQUET_FINANCIER', 'Parquet National Financier'),
-        ('PARQUET_MINEURS', 'Parquet des Mineurs'),
+        ('PGI', 'Parquet de Grande Instance'),
+        ('PPTP', 'Parquet Près le Tribunal de Paix'),
     ]
     
     nom = models.CharField(max_length=200)
