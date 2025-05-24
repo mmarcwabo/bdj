@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BDJ - Tribunal</title>
+</head>
+<body>
+    <div id="app"></div>
+    
+    <!-- Vue.js will be injected here in production -->
+    {% load static %}
+    {% if debug %}
+        <!-- Development mode - Vue dev server -->
+        <script type="module" src="http://localhost:5173/src/main.js"></script>
+    {% else %}
+        <!-- Production mode - built files -->
+        <script type="module" src="{% static 'dist/assets/index.js' %}"></script>
+        <link rel="stylesheet" href="{% static 'dist/assets/index.css' %}">
+    {% endif %}
+</body>
+</html>

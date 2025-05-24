@@ -77,21 +77,20 @@ class Magistrat(BaseModel):
     ]
     
     GRADES_SIEGE = [
-        ('PRESIDENT_TJ', 'Président de Tribunal Judiciaire'),
-        ('VICE_PRESIDENT', 'Vice-Président'),
+        ('PP', 'Premier Président'),
+        ('PI', 'Président'),
         ('PRESIDENT_CHAMBRE', 'Président de Chambre'),
         ('JUGE', 'Juge'),
         ('JUGE_INSTRUCTION', 'Juge d\'Instruction'),
         ('JUGE_ENFANTS', 'Juge des Enfants'),
-        ('JUGE_APPLICATION_PEINES', 'Juge de l\'Application des Peines'),
     ]
     
     GRADES_PARQUET = [
         ('PROCUREUR_GENERAL', 'Procureur Général'),
         ('AVOCAT_GENERAL', 'Avocat Général'),
         ('PROCUREUR_REPUBLIQUE', 'Procureur de la République'),
-        ('VICE_PROCUREUR', 'Vice-Procureur'),
         ('SUBSTITUT', 'Substitut du Procureur'),
+        ('CP', 'Chef de Parquet'),
     ]
     
     utilisateur = models.OneToOneField(User, on_delete=models.CASCADE)
